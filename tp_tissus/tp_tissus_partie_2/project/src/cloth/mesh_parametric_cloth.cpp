@@ -164,7 +164,7 @@ void mesh_parametric_cloth::update_force()
             else
                 line_bending.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-            for(auto f : line_shearing )
+            for(auto f : line_bending )
             {
                 if( f.x() != -1.0f && f[1] != -1.0f && f[2] != -1.0f)
                     force(ku,kv) -= f;
