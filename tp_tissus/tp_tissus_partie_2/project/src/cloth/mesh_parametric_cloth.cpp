@@ -42,7 +42,7 @@ vec3 mesh_parametric_cloth::calcul_force_shearing(vec3 p0,vec3 p1)
 
 vec3 mesh_parametric_cloth::calcul_force_bending(vec3 p0,vec3 p1)
 {
-    static float const L_rest = 1.0f/(2.0f*30.0f);
+    static float const L_rest = 2.0f/(30.0f);
     static float const K = 5.0f;
     float  L = norm(p0 - p1);
     return  K * (L-L_rest) * (p0-p1)/norm(p0 - p1);
