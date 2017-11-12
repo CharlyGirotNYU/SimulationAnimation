@@ -30,7 +30,7 @@ static cpe::mesh build_sphere(float radius,vec3 center);
 void scene::load_scene()
 {
     time_integration.restart();
-    delta_t=0.1f;
+    delta_t=0.15f;
     divergence=false;
 
     //*****************************************//

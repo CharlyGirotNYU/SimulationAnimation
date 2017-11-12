@@ -235,3 +235,5 @@ const float* vec3::cbegin() const {return &x_data;}
 const float* vec3::cend() const {return &z_data+1;}
 
 }
+
+

@@ -134,6 +134,7 @@ vec3 operator*(float s,vec3 const& v);
 /** Division by a scalar operator */
 vec3 operator/(vec3 const& v,float s);
 
+
 /** \brief unary negation */
 vec3 operator-(vec3 const& v);
 

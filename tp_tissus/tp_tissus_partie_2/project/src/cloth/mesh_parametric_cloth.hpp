@@ -42,6 +42,13 @@ public:
     void update_force();
     void integration_step(float dt);
 
+    /* Compute force exerced by structural springs */
+    vec3 calcul_force_structural(vec3 p0,vec3 p1);
+    /* Compute force exerced by shearing springs */
+    vec3 calcul_force_shearing(vec3 p0,vec3 p1);
+    /* Compute force exerced by bending springs */
+    vec3 calcul_force_bending(vec3 p0,vec3 p1);
+
 private:
 
     std::vector<vec3> speed_data;

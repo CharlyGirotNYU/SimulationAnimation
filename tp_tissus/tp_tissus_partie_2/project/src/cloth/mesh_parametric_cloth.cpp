@@ -24,14 +24,23 @@
 namespace cpe
 {
 
-vec3 calcul_force(vec3 p0,vec3 p1)
+vec3 mesh_parametric_cloth::calcul_force_structural(vec3 p0,vec3 p1)
 {
     static float const L_rest = 1.0f/30.0f; //modifier le L_rest pour calcul shearing springs
     static float const K = 5.0f;
     float  L = norm(p0 - p1);
     return  K * (L-L_rest) * (p0-p1)/norm(p0 - p1);
 }
-vec3 calcul_force2(vec3 p0,vec3 p1)
+
+vec3 mesh_parametric_cloth::calcul_force_shearing(vec3 p0,vec3 p1)
+{
+    static float const L_rest = sqrt(2.0f/(30.0f*30.0f));
+    static float const K = 7.0f;
+    float  L = norm(p0 - p1);
+    return  K * (L-L_rest) * (p0-p1)/norm(p0 - p1);
+}
+
+vec3 mesh_parametric_cloth::calcul_force_bending(vec3 p0,vec3 p1)
 {
     static float const L_rest = 1.0f/(2.0f*30.0f);
     static float const K = 5.0f;
@@ -62,233 +71,109 @@ void mesh_parametric_cloth::update_force()
     }
 
     //*************************************************************//
-    // TO DO, Calculer les forces s'appliquant sur chaque sommet
+    //  Calculer les forces s'appliquant sur chaque sommet
     //*************************************************************//
 
-
-
-    // Gestion des points interieurs
-    for(int ku=1 ; ku<Nu-1 ; ++ku)
-    {
-        for(int kv=1 ; kv<Nv-1 ; ++kv)
+    for(int ku=0; ku<Nu; ku++)
+        for(int kv=0;kv<Nv;kv++)
         {
-            vec3  p = vertex(ku,kv);
+            //Fill structural (ku-1,kv),(ku,kv-1),(ku+1,kv),(ku,kv+1) haut gauche bas droite
+            std::vector<vec3> line_structural;
+            //point haut
+            if(ku-1 >=0)
+                line_structural.push_back( calcul_force_structural(vertex(ku,kv),vertex(ku-1,kv)) );
+            else
+                line_structural.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-            //Structural springs
-            vec3  p_bas = vertex(ku+1,kv); vec3  p_haut = vertex(ku-1,kv);
-            vec3  p_gauche = vertex(ku,kv-1); vec3  p_droite = vertex(ku,kv+1);
-            force(ku,kv) -= calcul_force2(p,p_bas) + calcul_force2(p,p_haut) + calcul_force2(p,p_droite)  + calcul_force2(p,p_gauche);
+            //point gauche
+            if(kv-1>=0)
+                line_structural.push_back( calcul_force_structural(vertex(ku,kv),vertex(ku,kv-1)) );
+            else
+                line_structural.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-            //Shearing springs
-            vec3  p_bg = vertex(ku+1,kv-1); vec3  p_bd = vertex(ku+1,kv+1);
-            vec3  p_hg = vertex(ku-1,kv-1); vec3  p_hd = vertex(ku-1,kv+1);
-            force(ku,kv) -= calcul_force2(p,p_bg) + calcul_force2(p,p_hg) + calcul_force2(p,p_bd)  + calcul_force2(p,p_hd);
+            //point bas
+            if(ku+1 <=Nu-1)
+                line_structural.push_back( calcul_force_structural(vertex(ku,kv),vertex(ku+1,kv)) );
+            else
+                line_structural.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-            //Bending Springs
-            if(ku>=2 && ku<=Nu-3 && kv>=2 && kv<=Nv-3) //TOUT l'intérieur avec 4 points
+            //point droit
+            if(kv+1<=Nv-1)
+                line_structural.push_back( calcul_force_structural(vertex(ku,kv),vertex(ku,kv+1)) );
+            else
+                line_structural.push_back( vec3(-1.0f,-1.0f,-1.0f) );
+
+            for(auto f : line_structural )
             {
-                vec3 pb = vertex(ku+2,kv); vec3  ph = vertex(ku-2,kv);
-                vec3  pg = vertex(ku,kv-2); vec3  pd = vertex(ku,kv+2);
-                force(ku,kv) -= calcul_force2(p,pg) + calcul_force2(p,ph) + calcul_force2(p,pb)  + calcul_force2(p,pd);
-            }
-            else if(ku==1 && kv>=2 && kv<=Nv-3)
-            {
-                vec3 pb = vertex(ku+2,kv);
-                vec3  pg = vertex(ku,kv-2); vec3  pd = vertex(ku,kv+2);
-                force(ku,kv) -= calcul_force2(p,pg)  + calcul_force2(p,pb)  + calcul_force2(p,pd);
-            }
-            else if(ku==Nu-2 && kv>=2 && kv<=Nv-3)
-            {
-                vec3  ph = vertex(ku-2,kv);
-                vec3  pg = vertex(ku,kv-2); vec3  pd = vertex(ku,kv+2);
-                force(ku,kv) -= calcul_force2(p,pg) + calcul_force2(p,ph)   + calcul_force2(p,pd);
-            }
-            else if(kv==1 && ku >=2 && ku<=Nu-3)
-            {
-                vec3 pb = vertex(ku+2,kv); vec3  ph = vertex(ku-2,kv);
-                vec3  pd = vertex(ku,kv+2);
-                force(ku,kv) -=   calcul_force2(p,ph) + calcul_force2(p,pb)  + calcul_force2(p,pd);
-            }
-            else if(kv==Nv-2 && ku >=2 && ku<=Nu-3)
-            {
-                vec3 pb = vertex(ku+2,kv); vec3  ph = vertex(ku-2,kv);
-                vec3  pg = vertex(ku,kv-2);
-                force(ku,kv) -= calcul_force2(p,pg) + calcul_force2(p,ph) + calcul_force2(p,pb);
-            }
-            else if(ku==1 && kv==1)
-            {
-                vec3  pd = vertex(ku,kv+2);
-                vec3  pb = vertex(ku+2,kv);
-                force(ku,kv) -= calcul_force2(p,pd) + calcul_force2(p,pb) ;
-            }
-            else if(ku==1 && kv==Nv-2)
-            {
-                vec3  pb = vertex(ku+2,kv);
-                vec3  pg = vertex(ku,kv-2);
-                force(ku,kv) -= calcul_force2(p,pb) + calcul_force2(p,pg) ;
-            }
-            else if(ku==Nu-2 && kv==Nv-2)
-            {
-                vec3  ph = vertex(ku-2,kv);
-                vec3  pg = vertex(ku,kv-2);
-                force(ku,kv) -= calcul_force2(p,ph) + calcul_force2(p,pg) ;
-            }
-            else if(ku==Nu-2 && kv==1)
-            {
-                vec3  ph = vertex(ku-2,kv);
-                vec3  pd = vertex(ku,kv+2);
-                force(ku,kv) -= calcul_force2(p,ph) + calcul_force2(p,pd) ;
+                if( f.x() != -1.0f && f[1] != -1.0f && f[2] != -1.0f)
+                    force(ku,kv) -= f;
             }
 
+            //fill shearing (ku-1,kv-1),(ku+1,kv-1),(ku+1,kv+1)(ku-1,kv+1) hg bg bd hd
+            std::vector<vec3> line_shearing;
+            //point haut gauche hg
+            if(ku-1>=0 && kv-1 >= 0)
+                line_shearing.push_back( calcul_force_shearing(vertex(ku,kv), vertex(ku-1,kv-1)));
+            else
+                line_shearing.push_back(vec3(-1.0f,-1.0f,-1.0f));
+            //point bas gauche
+            if(ku+1<=Nu-1 && kv-1 >= 0)
+                line_shearing.push_back( calcul_force_shearing(vertex(ku,kv), vertex(ku+1,kv-1)));
+            else
+                line_shearing.push_back(vec3(-1.0f,-1.0f,-1.0f));
+            //point bas droite
+            if(ku+1<=Nu-1 && kv+1 <= Nv-1)
+                line_shearing.push_back( calcul_force_shearing(vertex(ku,kv), vertex(ku+1,kv+1)));
+            else
+                line_shearing.push_back(vec3(-1.0f,-1.0f,-1.0f));
+            //point haut droite
+            if(ku-1>=0 && kv+1 <= Nv-1)
+                line_shearing.push_back( calcul_force_shearing(vertex(ku,kv), vertex(ku-1,kv+1)));
+            else
+                line_shearing.push_back(vec3(-1.0f,-1.0f,-1.0f));
 
-        }
-    }
+            for(auto f : line_shearing )
+            {
+                if( f.x() != -1.0f && f[1] != -1.0f && f[2] != -1.0f)
+                    force(ku,kv) -= f;
+            }
 
-    // Gestion des bords
-    for(int ku=1 ; ku<Nu-1 ; ++ku)
-    {
-        //Strucural springs
-        vec3  p = vertex(ku,0);
-        vec3  p_bas = vertex(ku+1,0); vec3  p_haut = vertex(ku-1,0); vec3  p_droite = vertex(ku,1);
-        force(ku,0) -= calcul_force(p,p_bas) + calcul_force(p,p_haut) + calcul_force(p,p_droite);
+            //fill bending (ku-1,kv-1),(ku+1,kv-1),(ku+1,kv+1)(ku-1,kv+1) haut gauche bas droite
+            std::vector<vec3> line_bending;
+            //point haut
+            if(ku-2 >=0)
+                line_bending.push_back( calcul_force_bending(vertex(ku,kv),vertex(ku-2,kv)) );
+            else
+                line_bending.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-        p = vertex(ku,Nv-1);
-        p_bas = vertex(ku+1,Nv-1); p_haut = vertex(ku-1,Nv-1); vec3  p_gauche = vertex(ku,Nv-2);
-        force(ku,Nv-1) -= calcul_force(p,p_bas) + calcul_force(p,p_haut) + calcul_force(p,p_gauche);
+            //point gauche
+            if(kv-2>=0)
+                line_bending.push_back( calcul_force_bending(vertex(ku,kv),vertex(ku,kv-2)) );
+            else
+                line_bending.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-        //Shearing springs
-        p = vertex(ku,0);
-        vec3  p_bd = vertex(ku+1,1);vec3  p_hd = vertex(ku-1,1);
-        force(ku,0) -= calcul_force(p,p_bd)  + calcul_force(p,p_hd);
-        p = vertex(ku,Nv-1);
-        vec3  p_hg = vertex(ku-1,Nv-2); vec3  p_bg = vertex(ku+1,Nv-2);
-        force(ku,Nv-1)-= calcul_force(p,p_bg) + calcul_force(p,p_hg) ;
+            //point bas
+            if(ku+2 <=Nu-1)
+                line_bending.push_back( calcul_force_bending(vertex(ku,kv),vertex(ku+2,kv)) );
+            else
+                line_bending.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-        //Bending Springs
+            //point droit
+            if(kv+2<=Nv-1)
+                line_bending.push_back( calcul_force_bending(vertex(ku,kv),vertex(ku,kv+2)) );
+            else
+                line_bending.push_back( vec3(-1.0f,-1.0f,-1.0f) );
 
-
-
-        if(ku >=2 && ku<=Nu-3)
-        {
-            p = vertex(ku,0);
-            vec3 pb = vertex(ku+2,0); vec3  ph = vertex(ku-2,0); vec3  pd = vertex(ku,2);
-            force(ku,0) -=   calcul_force2(p,ph) + calcul_force2(p,pb)  + calcul_force2(p,pd);
-            p = vertex(ku,Nv-1);
-            pb = vertex(ku+2,Nv-1);   ph = vertex(ku-2,Nv-1); vec3  pg = vertex(ku,Nv-3);
-            force(ku,Nv-1) -=   calcul_force2(p,ph) + calcul_force2(p,pb)  + calcul_force2(p,pg);
-        }
-        else if(ku ==1)
-        {
-            p = vertex(ku,0);
-            vec3 pb = vertex(ku+2,0);  vec3  pd = vertex(ku,2);
-            force(ku,0) -=    calcul_force2(p,pb)  + calcul_force2(p,pd);
-            p = vertex(ku,Nv-1);
-            pb = vertex(ku+2,Nv-1);  vec3  pg = vertex(ku,Nv-3);
-            force(ku,Nv-1) -=    calcul_force2(p,pb)  + calcul_force2(p,pg);
-
-        }
-        else if(ku == Nu-2 )
-        {
-            p = vertex(ku,0);
-            vec3  ph = vertex(ku-2,0); vec3  pd = vertex(ku,2);
-            force(ku,0) -=   calcul_force2(p,ph) +  calcul_force2(p,pd);
-            p = vertex(ku,Nv-1);
-            ph = vertex(ku-2,Nv-1); vec3  pg = vertex(ku,Nv-3);
-            force(ku,Nv-1) -=   calcul_force2(p,ph) +  calcul_force2(p,pg);
+            for(auto f : line_shearing )
+            {
+                if( f.x() != -1.0f && f[1] != -1.0f && f[2] != -1.0f)
+                    force(ku,kv) -= f;
+            }
         }
 
+    force(0,0) = vec3(0,0,0);
+    force(0,Nv-1) = vec3(0,0,0);
 
-    }
-
-    for(int kv=1 ; kv<Nv-1 ; ++kv)
-    {
-        //Strucural springs
-        vec3  p = vertex(0,kv);
-        vec3  p_bas = vertex(1,kv);  vec3  p_gauche = vertex(0,kv-1); vec3  p_droite = vertex(0,kv+1);
-        force(0,kv) -= calcul_force(p,p_bas) + calcul_force(p,p_gauche) + calcul_force(p,p_droite);
-
-        p = vertex(Nu-1,kv);
-        p_droite = vertex(Nu-1,kv+1); vec3 p_haut = vertex(Nu-2,kv); p_gauche = vertex(Nu-1,kv-1);
-        force(Nu-1,kv) -= calcul_force(p,p_droite) + calcul_force(p,p_haut) + calcul_force(p,p_gauche);
-
-        //Shearing springs
-        p = vertex(0,kv);
-        vec3  p_bg = vertex(1,kv-1); vec3  p_bd = vertex(1,kv+1);
-        force(0,kv) -= calcul_force(p,p_bg)  + calcul_force(p,p_bd);
-        p = vertex(Nu-1,kv);
-        vec3  p_hg = vertex(Nu-2,kv-1); vec3  p_hd = vertex(Nu-2,kv+1);
-        force(Nu-1,kv) -= calcul_force(p,p_hg) +  calcul_force(p,p_hd);
-
-        //Bending Springs
-
-        if(kv>= 2 && kv <= Nv-3)
-        {
-            p = vertex(0,kv);
-            vec3  pb = vertex(2,kv);  vec3  pg = vertex(0,kv-2); vec3  pd = vertex(0,kv+2);
-            force(0,kv) -= calcul_force2(p,pb) + calcul_force2(p,pg) + calcul_force2(p,pd);
-
-            p = vertex(Nu-1,kv);
-            pb = vertex(Nu-1,kv+2); vec3 ph = vertex(Nu-3,kv); pg = vertex(Nu-1,kv-2);
-            force(Nu-1,kv) -= calcul_force2(p,pb) + calcul_force2(p,ph) + calcul_force2(p,pg);
-        }
-        else if(kv ==1)
-        {
-            p = vertex(0,kv);
-            vec3  pb = vertex(2,kv);  vec3  pd = vertex(0,kv+2);
-            force(0,kv) -= calcul_force2(p,pb) + calcul_force2(p,pd);
-
-            p = vertex(Nu-1,kv);
-            pd = vertex(Nu-1,kv+2); vec3 ph = vertex(Nu-3,kv);
-            force(Nu-1,kv) -= calcul_force2(p,pd) + calcul_force2(p,ph);
-
-        }
-        else if (kv == Nv-2)
-        {
-            p = vertex(0,kv);
-            vec3  pb = vertex(2,kv);  vec3  pg = vertex(0,kv-2);
-            force(0,kv) -= calcul_force2(p,pb) + calcul_force2(p,pg);
-
-            p = vertex(Nu-1,kv);
-            pg = vertex(Nu-1,kv-2); vec3 ph = vertex(Nu-3,kv);
-            force(Nu-1,kv) -= calcul_force2(p,pg) + calcul_force2(p,ph);
-        }
-
-    }
-    // Gestion des 4 coins
-
-    //Pour 2 sommets des extremités du maillage : force à 0
-    force(0,0) = vec3(0.0f,0.0f,0.0f);
-    force(0,Nv-1) = vec3(0.0f,0.0f,0.0f);
-
-    //    vec3 p = vertex(0,0);
-    //    vec3 p_bas = vertex(1,0);
-    //    vec3 p_droite = vertex(0,1);
-
-    //    force(0,0) += calcul_force(p,p_droite) + calcul_force(p,p_bas);
-
-    vec3  p = vertex(Nu-1,0);
-    vec3 p_haut = vertex(Nu-2,0);
-    vec3 p_droite = vertex(Nu-1,1);
-    vec3  p_hd = vertex(Nu-2,1);
-    vec3 ph = vertex(Nu-3,0);
-    vec3 pd = vertex(Nu-1,2);
-    force(Nu-1,0) -= calcul_force(p,p_haut) + calcul_force(p,p_droite) + calcul_force(p,p_hd)
-                     + calcul_force2(p,ph) + calcul_force2(p,pd);
-
-    //    p = vertex(0,Nv-1);
-    //    vec3 p_gauche = vertex(0,Nv-2);
-    //    p_bas = vertex(1,Nv-1);
-    //    force(0,Nv-1) += calcul_force(p,p_bas) + calcul_force(p,p_gauche);
-
-    p = vertex(Nu-1,Nv-1);
-    p_haut = vertex(Nu-2,Nv-1);
-    vec3 p_gauche = vertex(Nu-1,Nv-2);
-    vec3  p_hg = vertex(Nu-2,Nv-2);
-    ph = vertex(Nu-3,Nv-1);
-    vec3 pg = vertex(Nu-1,Nv-3);
-
-    force(Nu-1,Nv-1) -= calcul_force(p,p_haut) + calcul_force(p,p_gauche) + calcul_force(p,p_hg)
-                        + calcul_force2(p,ph) + calcul_force2(p,pg);
 
 }
 
@@ -301,7 +186,7 @@ void mesh_parametric_cloth::integration_step(float const dt)
     int const Nu = size_u();
     int const Nv = size_v();
 
-    static float const mu = 0.2f;
+    static float const mu = 0.8f;
     //*************************************************************//
     // TO DO: Calculer l'integration numerique des positions au cours de l'intervalle de temps dt.
     //*************************************************************//
