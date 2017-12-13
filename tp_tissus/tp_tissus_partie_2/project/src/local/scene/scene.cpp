@@ -30,7 +30,7 @@ static cpe::mesh build_sphere(float radius,vec3 center);
 void scene::load_scene()
 {
     time_integration.restart();
-    delta_t=0.15f;
+    delta_t=0.2f;
     divergence=false;
 
     //*****************************************//
@@ -53,7 +53,7 @@ void scene::load_scene()
     //*****************************************//
     // Sphere
     //*****************************************//
-    mesh_sphere = build_sphere(0.198f , {0.5f,0.05f,-1.1f});
+    mesh_sphere = build_sphere(radius , centre);
     mesh_sphere.fill_empty_field_by_default();
     mesh_sphere_opengl.fill_vbo(mesh_sphere);
 
@@ -67,7 +67,7 @@ void scene::load_scene()
 
 }
 
-
+//2s 200000000
 
 void scene::draw_scene()
 {
@@ -90,6 +90,8 @@ void scene::draw_scene()
             // compute-force / time integration
             mesh_cloth.update_force();
             mesh_cloth.integration_step(delta_t);
+            mesh_cloth.update_shpere_collision(mesh_sphere,centre,radius);
+            mesh_cloth.update_plan_collision(mesh_ground);
 
             // re-compute normals
             mesh_cloth.fill_normal();

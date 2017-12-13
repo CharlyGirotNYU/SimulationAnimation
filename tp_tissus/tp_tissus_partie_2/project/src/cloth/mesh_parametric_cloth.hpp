@@ -23,6 +23,7 @@
 
 #include "../lib/mesh/mesh_parametric.hpp"
 #include "../lib/common/exception_cpe.hpp"
+#include "../lib/mesh/mesh.hpp"
 
 namespace cpe
 {
@@ -49,10 +50,28 @@ public:
     /* Compute force exerced by bending springs */
     vec3 calcul_force_bending(vec3 p0,vec3 p1);
 
+    /* Compute force exerced by wind */
+    vec3 calcul_force_wind(vec3 n);
+
+//    /* Get/Set bool colision_plan */
+//    bool const& collision_with_plan(const int ku, const int kv) const;
+//    bool& collision_with_plan( int const ku, int const kv);
+
+    /* Check collision with a plan given as parameter*/
+    void update_plan_collision(mesh m);
+
+    /* Check collision with a sphere given as parameter */
+    void update_shpere_collision(mesh m, vec3 centre, float radius);
+
+
+    float distance(vec3 A,vec3 B);
+
 private:
 
     std::vector<vec3> speed_data;
     std::vector<vec3> force_data;
+    std::vector<bool> collision_plan_data;
+    vec3 wind_direction;
 
 };
 

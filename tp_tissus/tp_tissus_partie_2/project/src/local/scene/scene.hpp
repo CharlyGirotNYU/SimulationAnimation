@@ -66,6 +66,9 @@ private:
     /** Cloth mesh for OpenGL drawing */
     cpe::mesh_opengl mesh_cloth_opengl;
 
+    /** Parameter of a sphere */
+    float radius = 0.198f ;
+    cpe::vec3 centre = {0.5f,0.05f,-1.1f};
     /** Mesh of a sphere */
     cpe::mesh mesh_sphere;
     /** OpenGL VBO for the sphere */

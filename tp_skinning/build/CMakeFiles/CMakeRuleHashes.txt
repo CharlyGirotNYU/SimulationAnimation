@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+543efeec57faac8467fdcace87aafd11 project/src/lib/interface/moc_application_qt.cxx
+37c471a5d93a5da488258261875f3827 project/src/local/interface/moc_myWidgetGL.cxx
+a9ba3e88528b2fb4b4565f050bea75e6 project/src/local/interface/moc_myWindow.cxx
+25e641c4e64f279e72e832f6a94f2379 ui_mainwindow.h

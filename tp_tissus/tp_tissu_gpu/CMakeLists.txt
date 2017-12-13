@@ -23,4 +23,4 @@ add_executable(
   ${source_files}
 )
 
-target_link_libraries(cpe_surface ${OPENGL_LIBRARIES} -lGL -lGLU -lglut -lGLEW)
+target_link_libraries(cpe_surface ${OPENGL_LIBRARIES} -lGL -lGLU -lglut -lGLEW -L/usr/lib/nvidia-340)

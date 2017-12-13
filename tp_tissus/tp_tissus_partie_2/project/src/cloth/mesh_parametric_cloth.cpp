@@ -21,6 +21,7 @@
 #include "../lib/common/error_handling.hpp"
 #include <cmath>
 
+
 namespace cpe
 {
 
@@ -48,6 +49,13 @@ vec3 mesh_parametric_cloth::calcul_force_bending(vec3 p0,vec3 p1)
     return  K * (L-L_rest) * (p0-p1)/norm(p0 - p1);
 }
 
+vec3 mesh_parametric_cloth::calcul_force_wind(vec3 n)
+{
+    float intensity = 0.05f;
+    wind_direction = {1.0f,0.0f,0.0f};
+    return intensity * dot(n,wind_direction) * n;
+}
+
 void mesh_parametric_cloth::update_force()
 {
 
@@ -58,25 +66,22 @@ void mesh_parametric_cloth::update_force()
 
 
 
-    //Gravity
+
     static vec3 const g (0.0f,0.0f,-9.81f);
     vec3 const g_normalized = g/N_total;
     for(int ku=0 ; ku<Nu ; ++ku)
-    {
         for(int kv=0 ; kv<Nv ; ++kv)
         {
 
+            //*******//
+            // Gravity
+            //*******//
             force(ku,kv) = g_normalized;
-        }
-    }
 
-    //*************************************************************//
-    //  Calculer les forces s'appliquant sur chaque sommet
-    //*************************************************************//
+            //*************************************************************//
+            //  Calculer les forces des ressorts s'appliquant sur chaque sommet
+            //*************************************************************//
 
-    for(int ku=0; ku<Nu; ku++)
-        for(int kv=0;kv<Nv;kv++)
-        {
             //Fill structural (ku-1,kv),(ku,kv-1),(ku+1,kv),(ku,kv+1) haut gauche bas droite
             std::vector<vec3> line_structural;
             //point haut
@@ -169,7 +174,15 @@ void mesh_parametric_cloth::update_force()
                 if( f.x() != -1.0f && f[1] != -1.0f && f[2] != -1.0f)
                     force(ku,kv) -= f;
             }
+
+
+            //***********//
+            //WIND
+            //***********//
+            force(ku,kv) += calcul_force_wind(normal(ku,kv));
         }
+
+
 
     force(0,0) = vec3(0,0,0);
     force(0,Nv-1) = vec3(0,0,0);
@@ -226,6 +239,7 @@ void mesh_parametric_cloth::set_plane_xy_unit(int const size_u_param,int const s
     int const N = size_u()*size_v();
     speed_data.resize(N);
     force_data.resize(N);
+    collision_plan_data.resize(N);
 }
 
 vec3 const& mesh_parametric_cloth::speed(int const ku,int const kv) const
@@ -284,5 +298,92 @@ vec3& mesh_parametric_cloth::force(int const ku,int const kv)
     return force_data[offset];
 }
 
+//bool const& mesh_parametric_cloth::collision_with_plan(int const ku, int const kv) const
+//{
+//    ASSERT_CPE(ku >= 0 , "Value ku ("+std::to_string(ku)+") should be >=0 ");
+//    ASSERT_CPE(ku < size_u() , "Value ku ("+std::to_string(ku)+") should be < size_u ("+std::to_string(size_u())+")");
+//    ASSERT_CPE(kv >= 0 , "Value kv ("+std::to_string(kv)+") should be >=0 ");
+//    ASSERT_CPE(kv < size_v() , "Value kv ("+std::to_string(kv)+") should be < size_v ("+std::to_string(size_v())+")");
+
+//    int const offset = ku + size_u()*kv;
+
+//    ASSERT_CPE(offset < static_cast<int>(collision_plan_data.size()),"Internal error");
+
+//    return collision_plan_data[offset];
+//}
+
+//bool& mesh_parametric_cloth::collision_with_plan( int const ku, int const kv)
+//{
+//    ASSERT_CPE(ku >= 0 , "Value ku ("+std::to_string(ku)+") should be >=0 ");
+//    ASSERT_CPE(ku < size_u() , "Value ku ("+std::to_string(ku)+") should be < size_u ("+std::to_string(size_u())+")");
+//    ASSERT_CPE(kv >= 0 , "Value kv ("+std::to_string(kv)+") should be >=0 ");
+//    ASSERT_CPE(kv < size_v() , "Value kv ("+std::to_string(kv)+") should be < size_v ("+std::to_string(size_v())+")");
+
+//    int const offset = ku + size_u()*kv;
+
+//    ASSERT_CPE(offset < static_cast<int>(collision_plan_data.size()),"Internal error");
+
+//    return collision_plan_data[offset];
+//}
+
+void mesh_parametric_cloth::update_plan_collision(cpe::mesh m)
+{
+    float h = m.vertex(0).z();
+    int const Nu = size_u();
+    int const Nv = size_v();
+    int const N_total = Nu*Nv;
+    ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
+
+    float epsilon=0.01f;
+
+    for(int ku=0 ; ku<Nu ; ++ku)
+    {
+        for(int kv=0 ; kv<Nv ; ++kv)
+        {
+            if(this->vertex(ku,kv).z() < h+epsilon)
+            {
+                force(ku,kv) = vec3(force(ku,kv).x(),force(ku,kv).y(),0.0f);
+                speed(ku,kv) = vec3(speed(ku,kv).x(), speed(ku,kv).y(),0.0f);
+                vertex(ku,kv).z() = h +epsilon;
+            }
+        }
+    }
+}
+
+void mesh_parametric_cloth::update_shpere_collision(mesh m, cpe::vec3 centre, float radius)
+{
+    int const N = m.size_vertex();
+
+    int const Nu = size_u();
+    int const Nv = size_v();
+    int const N_total = Nu*Nv;
+    ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
+
+    float epsilon=0.0015f;
+
+    for(int ku=0 ; ku<Nu ; ++ku)
+    {
+        for(int kv=0 ; kv<Nv ; ++kv)
+        {
+           for(int k=0; k<N; k++)
+           {
+               if(distance(vertex(ku,kv),centre) < radius+epsilon)
+               {
+                   float speed_n = dot(speed(ku,kv),m.normal(k));
+                   float force_n = dot(force(ku,kv),m.normal(k));
+                   force(ku,kv) -= force_n *m.normal(k);
+                   speed(ku,kv) -= speed_n * m.normal(k);
+                   vertex(ku,kv) += epsilon *m.normal(k);
+               }
+           }
+        }
+    }
 
 }
+
+float mesh_parametric_cloth::distance(vec3 A,vec3 B)
+{
+    return sqrt( (A.x()-B.x())*(A.x()-B.x()) + (A.y()-B.y())*(A.y()-B.y()) + (A.z()-B.z())*(A.z()-B.z()));
+}
+
+}//Accolade du namespace
