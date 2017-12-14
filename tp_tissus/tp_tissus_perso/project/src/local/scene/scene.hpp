@@ -77,11 +77,16 @@ private:
     /** Parameter of a sphere */
     float radius = 0.198f ;
     //cpe::vec3 centre = {0.5f,0.5f,-0.5f};
-    cpe::vec3 centre = {0.0f,0.0f,0.0f};
+    cpe::vec3 centre = {0.3f,-0.0f,-0.3f};
     /** Mesh of a sphere */
     cpe::mesh mesh_sphere;
     /** OpenGL VBO for the sphere */
     cpe::mesh_opengl mesh_sphere_opengl;
+
+    /** Cat mesh */
+    cpe::mesh mesh_cat;
+    /** Cat mesh for openGl drawing */
+    cpe::mesh_opengl mesh_cat_opengl;
 
     /** OpenGL ID for shader drawing meshes */
     GLuint shader_mesh;
@@ -89,6 +94,8 @@ private:
     GLuint texture_cloth;
     /** OpenGL ID for the texture of the ground */
     GLuint texture_ground;
+    /** OpenGL ID for the texture of the cat */
+    GLuint texture_cat;
 
 
     /** Time counter */

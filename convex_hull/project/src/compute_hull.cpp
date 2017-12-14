@@ -5,10 +5,12 @@
 
 
 /* Return true if det > 0 */
+
 bool sign_det(vec2 A, vec2 B, vec2 X)
 {
     return  ((B.x - A.x)*(X.y-A.y) - (X.x -A.x)*(B.y-A.y)) < 0;
 }
+
 
 /* Return true if all points are left */
 bool allAtLeft(vec2 A, vec2 B, const std::vector<vec2>& V)

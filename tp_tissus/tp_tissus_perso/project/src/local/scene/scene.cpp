@@ -41,6 +41,7 @@ void scene::load_scene()
 
     texture_cloth = load_texture_file("data/cloth.png");
     texture_ground = load_texture_file("data/wood_texture.png");
+    texture_cat = load_texture_file("data/cat.png");
 
     //*****************************************//
     // Build ground
@@ -71,6 +72,14 @@ void scene::load_scene()
     mesh_cloth.fill_empty_field_by_default();
     mesh_cloth_opengl.fill_vbo(mesh_cloth);
 
+    //***************************************//
+    //Build Cat
+    //***************************************//
+    mesh_cat = load_mesh_file("data/cat.obj");
+    mesh_cat.transform_apply_auto_scale_and_center();
+    mesh_cat.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    mesh_cat_opengl.fill_vbo(mesh_cat);
+
 
 }
 
@@ -87,6 +96,9 @@ void scene::draw_scene()
     // draw the sphere
     glBindTexture(GL_TEXTURE_2D,texture_default);                                                      PRINT_OPENGL_ERROR();
     mesh_sphere_opengl.draw();
+    // Draw the cat
+    glBindTexture(GL_TEXTURE_2D, texture_cat);
+    mesh_cat_opengl.draw();
 
 
     //try numerical integration (stop computation if divergence)

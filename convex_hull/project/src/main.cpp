@@ -4,7 +4,7 @@
 #include <chrono>
 
 #include "compute_hull.hpp"
-#include "compute_quick_hull.hpp"
+//#include "compute_quick_hull.hpp"
 
 void export_data(const std::vector<vec2>& V,const std::vector<vec2>& hull);
 

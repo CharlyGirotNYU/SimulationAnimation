@@ -5,7 +5,11 @@
 struct vec2
 {
     float x,y;
-    vec2 operator()(float a, float b):x(a),y(b){};
+    vec2 operator()(float a, float b)
+    {
+        x = a; y= b;
+    }
+        ;
 };
 
 class point_generator

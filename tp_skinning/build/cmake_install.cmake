@@ -1,4 +1,4 @@
-# Install script for directory: /fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning
+# Install script for directory: /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

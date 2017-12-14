@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning
+CMAKE_SOURCE_DIR = /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_tissus/tp_tissus_perso
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build
+CMAKE_BINARY_DIR = /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_tissus/tp_tissus_perso
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/CMakeFiles /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_tissus/tp_tissus_perso/CMakeFiles /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_tissus/tp_tissus_perso/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_tissus/tp_tissus_perso/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -113,6 +113,30 @@ pgm: cmake_check_build_system
 pgm/fast:
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/build
 .PHONY : pgm/fast
+
+project/src/cloth/mesh_parametric_cloth.o: project/src/cloth/mesh_parametric_cloth.cpp.o
+.PHONY : project/src/cloth/mesh_parametric_cloth.o
+
+# target to build an object file
+project/src/cloth/mesh_parametric_cloth.cpp.o:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/cloth/mesh_parametric_cloth.cpp.o
+.PHONY : project/src/cloth/mesh_parametric_cloth.cpp.o
+
+project/src/cloth/mesh_parametric_cloth.i: project/src/cloth/mesh_parametric_cloth.cpp.i
+.PHONY : project/src/cloth/mesh_parametric_cloth.i
+
+# target to preprocess a source file
+project/src/cloth/mesh_parametric_cloth.cpp.i:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/cloth/mesh_parametric_cloth.cpp.i
+.PHONY : project/src/cloth/mesh_parametric_cloth.cpp.i
+
+project/src/cloth/mesh_parametric_cloth.s: project/src/cloth/mesh_parametric_cloth.cpp.s
+.PHONY : project/src/cloth/mesh_parametric_cloth.s
+
+# target to generate assembly for a file
+project/src/cloth/mesh_parametric_cloth.cpp.s:
+	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/cloth/mesh_parametric_cloth.cpp.s
+.PHONY : project/src/cloth/mesh_parametric_cloth.cpp.s
 
 project/src/external/perlin/simplexnoise1234.o: project/src/external/perlin/simplexnoise1234.cpp.o
 .PHONY : project/src/external/perlin/simplexnoise1234.o
@@ -1002,174 +1026,6 @@ project/src/local/scene/scene.cpp.s:
 	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/local/scene/scene.cpp.s
 .PHONY : project/src/local/scene/scene.cpp.s
 
-project/src/skinning/mesh_skinned.o: project/src/skinning/mesh_skinned.cpp.o
-.PHONY : project/src/skinning/mesh_skinned.o
-
-# target to build an object file
-project/src/skinning/mesh_skinned.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/mesh_skinned.cpp.o
-.PHONY : project/src/skinning/mesh_skinned.cpp.o
-
-project/src/skinning/mesh_skinned.i: project/src/skinning/mesh_skinned.cpp.i
-.PHONY : project/src/skinning/mesh_skinned.i
-
-# target to preprocess a source file
-project/src/skinning/mesh_skinned.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/mesh_skinned.cpp.i
-.PHONY : project/src/skinning/mesh_skinned.cpp.i
-
-project/src/skinning/mesh_skinned.s: project/src/skinning/mesh_skinned.cpp.s
-.PHONY : project/src/skinning/mesh_skinned.s
-
-# target to generate assembly for a file
-project/src/skinning/mesh_skinned.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/mesh_skinned.cpp.s
-.PHONY : project/src/skinning/mesh_skinned.cpp.s
-
-project/src/skinning/skeleton_animation.o: project/src/skinning/skeleton_animation.cpp.o
-.PHONY : project/src/skinning/skeleton_animation.o
-
-# target to build an object file
-project/src/skinning/skeleton_animation.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_animation.cpp.o
-.PHONY : project/src/skinning/skeleton_animation.cpp.o
-
-project/src/skinning/skeleton_animation.i: project/src/skinning/skeleton_animation.cpp.i
-.PHONY : project/src/skinning/skeleton_animation.i
-
-# target to preprocess a source file
-project/src/skinning/skeleton_animation.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_animation.cpp.i
-.PHONY : project/src/skinning/skeleton_animation.cpp.i
-
-project/src/skinning/skeleton_animation.s: project/src/skinning/skeleton_animation.cpp.s
-.PHONY : project/src/skinning/skeleton_animation.s
-
-# target to generate assembly for a file
-project/src/skinning/skeleton_animation.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_animation.cpp.s
-.PHONY : project/src/skinning/skeleton_animation.cpp.s
-
-project/src/skinning/skeleton_geometry.o: project/src/skinning/skeleton_geometry.cpp.o
-.PHONY : project/src/skinning/skeleton_geometry.o
-
-# target to build an object file
-project/src/skinning/skeleton_geometry.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_geometry.cpp.o
-.PHONY : project/src/skinning/skeleton_geometry.cpp.o
-
-project/src/skinning/skeleton_geometry.i: project/src/skinning/skeleton_geometry.cpp.i
-.PHONY : project/src/skinning/skeleton_geometry.i
-
-# target to preprocess a source file
-project/src/skinning/skeleton_geometry.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_geometry.cpp.i
-.PHONY : project/src/skinning/skeleton_geometry.cpp.i
-
-project/src/skinning/skeleton_geometry.s: project/src/skinning/skeleton_geometry.cpp.s
-.PHONY : project/src/skinning/skeleton_geometry.s
-
-# target to generate assembly for a file
-project/src/skinning/skeleton_geometry.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_geometry.cpp.s
-.PHONY : project/src/skinning/skeleton_geometry.cpp.s
-
-project/src/skinning/skeleton_joint.o: project/src/skinning/skeleton_joint.cpp.o
-.PHONY : project/src/skinning/skeleton_joint.o
-
-# target to build an object file
-project/src/skinning/skeleton_joint.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_joint.cpp.o
-.PHONY : project/src/skinning/skeleton_joint.cpp.o
-
-project/src/skinning/skeleton_joint.i: project/src/skinning/skeleton_joint.cpp.i
-.PHONY : project/src/skinning/skeleton_joint.i
-
-# target to preprocess a source file
-project/src/skinning/skeleton_joint.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_joint.cpp.i
-.PHONY : project/src/skinning/skeleton_joint.cpp.i
-
-project/src/skinning/skeleton_joint.s: project/src/skinning/skeleton_joint.cpp.s
-.PHONY : project/src/skinning/skeleton_joint.s
-
-# target to generate assembly for a file
-project/src/skinning/skeleton_joint.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_joint.cpp.s
-.PHONY : project/src/skinning/skeleton_joint.cpp.s
-
-project/src/skinning/skeleton_parent_id.o: project/src/skinning/skeleton_parent_id.cpp.o
-.PHONY : project/src/skinning/skeleton_parent_id.o
-
-# target to build an object file
-project/src/skinning/skeleton_parent_id.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_parent_id.cpp.o
-.PHONY : project/src/skinning/skeleton_parent_id.cpp.o
-
-project/src/skinning/skeleton_parent_id.i: project/src/skinning/skeleton_parent_id.cpp.i
-.PHONY : project/src/skinning/skeleton_parent_id.i
-
-# target to preprocess a source file
-project/src/skinning/skeleton_parent_id.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_parent_id.cpp.i
-.PHONY : project/src/skinning/skeleton_parent_id.cpp.i
-
-project/src/skinning/skeleton_parent_id.s: project/src/skinning/skeleton_parent_id.cpp.s
-.PHONY : project/src/skinning/skeleton_parent_id.s
-
-# target to generate assembly for a file
-project/src/skinning/skeleton_parent_id.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skeleton_parent_id.cpp.s
-.PHONY : project/src/skinning/skeleton_parent_id.cpp.s
-
-project/src/skinning/skinning_weight.o: project/src/skinning/skinning_weight.cpp.o
-.PHONY : project/src/skinning/skinning_weight.o
-
-# target to build an object file
-project/src/skinning/skinning_weight.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skinning_weight.cpp.o
-.PHONY : project/src/skinning/skinning_weight.cpp.o
-
-project/src/skinning/skinning_weight.i: project/src/skinning/skinning_weight.cpp.i
-.PHONY : project/src/skinning/skinning_weight.i
-
-# target to preprocess a source file
-project/src/skinning/skinning_weight.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skinning_weight.cpp.i
-.PHONY : project/src/skinning/skinning_weight.cpp.i
-
-project/src/skinning/skinning_weight.s: project/src/skinning/skinning_weight.cpp.s
-.PHONY : project/src/skinning/skinning_weight.s
-
-# target to generate assembly for a file
-project/src/skinning/skinning_weight.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/skinning_weight.cpp.s
-.PHONY : project/src/skinning/skinning_weight.cpp.s
-
-project/src/skinning/vertex_weight_parameter.o: project/src/skinning/vertex_weight_parameter.cpp.o
-.PHONY : project/src/skinning/vertex_weight_parameter.o
-
-# target to build an object file
-project/src/skinning/vertex_weight_parameter.cpp.o:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/vertex_weight_parameter.cpp.o
-.PHONY : project/src/skinning/vertex_weight_parameter.cpp.o
-
-project/src/skinning/vertex_weight_parameter.i: project/src/skinning/vertex_weight_parameter.cpp.i
-.PHONY : project/src/skinning/vertex_weight_parameter.i
-
-# target to preprocess a source file
-project/src/skinning/vertex_weight_parameter.cpp.i:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/vertex_weight_parameter.cpp.i
-.PHONY : project/src/skinning/vertex_weight_parameter.cpp.i
-
-project/src/skinning/vertex_weight_parameter.s: project/src/skinning/vertex_weight_parameter.cpp.s
-.PHONY : project/src/skinning/vertex_weight_parameter.s
-
-# target to generate assembly for a file
-project/src/skinning/vertex_weight_parameter.cpp.s:
-	$(MAKE) -f CMakeFiles/pgm.dir/build.make CMakeFiles/pgm.dir/project/src/skinning/vertex_weight_parameter.cpp.s
-.PHONY : project/src/skinning/vertex_weight_parameter.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1179,6 +1035,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... pgm"
 	@echo "... rebuild_cache"
+	@echo "... project/src/cloth/mesh_parametric_cloth.o"
+	@echo "... project/src/cloth/mesh_parametric_cloth.i"
+	@echo "... project/src/cloth/mesh_parametric_cloth.s"
 	@echo "... project/src/external/perlin/simplexnoise1234.o"
 	@echo "... project/src/external/perlin/simplexnoise1234.i"
 	@echo "... project/src/external/perlin/simplexnoise1234.s"
@@ -1290,27 +1149,6 @@ help:
 	@echo "... project/src/local/scene/scene.o"
 	@echo "... project/src/local/scene/scene.i"
 	@echo "... project/src/local/scene/scene.s"
-	@echo "... project/src/skinning/mesh_skinned.o"
-	@echo "... project/src/skinning/mesh_skinned.i"
-	@echo "... project/src/skinning/mesh_skinned.s"
-	@echo "... project/src/skinning/skeleton_animation.o"
-	@echo "... project/src/skinning/skeleton_animation.i"
-	@echo "... project/src/skinning/skeleton_animation.s"
-	@echo "... project/src/skinning/skeleton_geometry.o"
-	@echo "... project/src/skinning/skeleton_geometry.i"
-	@echo "... project/src/skinning/skeleton_geometry.s"
-	@echo "... project/src/skinning/skeleton_joint.o"
-	@echo "... project/src/skinning/skeleton_joint.i"
-	@echo "... project/src/skinning/skeleton_joint.s"
-	@echo "... project/src/skinning/skeleton_parent_id.o"
-	@echo "... project/src/skinning/skeleton_parent_id.i"
-	@echo "... project/src/skinning/skeleton_parent_id.s"
-	@echo "... project/src/skinning/skinning_weight.o"
-	@echo "... project/src/skinning/skinning_weight.i"
-	@echo "... project/src/skinning/skinning_weight.s"
-	@echo "... project/src/skinning/vertex_weight_parameter.o"
-	@echo "... project/src/skinning/vertex_weight_parameter.i"
-	@echo "... project/src/skinning/vertex_weight_parameter.s"
 .PHONY : help
 
 

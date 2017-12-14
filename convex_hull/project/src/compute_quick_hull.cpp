@@ -1,9 +1,10 @@
-#include "compute_hull.hpp"
+
+#include "compute_quick_hull.hpp"
 #include<algorithm>
 #include<iostream>
 #include "vec2.hpp"
 
-bool sign_det(vec2 A, vec2 B, vec2 X)
+bool sign_det2(vec2 A, vec2 B, vec2 X)
 {
     return  ((B.x - A.x)*(X.y-A.y) - (X.x -A.x)*(B.y-A.y)) < 0;
 }
@@ -36,13 +37,14 @@ std::vector<vec2> compute_quick_hull(const std::vector<vec2>& V)
     float xmin=1000;
     float ymin = 1000;
 
+    vec2 A;
     for(auto v : V)
     {
         if(v.x < xmin)
         {
             xmin=v.x; //point le plus a gauche
             ymin=v.y;
-            vec2 A;
+
             A.x = xmin;
             A.y = ymin;
             break;

@@ -6,63 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/build/project/src/lib/interface/moc_application_qt.cxx
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/project/src/lib/interface/moc_application_qt.cxx
 ../../../../../project/src/lib/interface/application_qt.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/build/project/src/local/interface/moc_myWidgetGL.cxx
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/project/src/local/interface/moc_myWidgetGL.cxx
 ../../../../../project/src/local/interface/myWidgetGL.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/build/project/src/local/interface/moc_myWindow.cxx
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/build/project/src/local/interface/moc_myWindow.cxx
 ../../../../../project/src/local/interface/myWindow.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.cpp
 simplexnoise1234.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.cpp
 mat1x4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 mat4x1.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
 mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
 vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.cpp
 mat2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.hpp
 vec2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat2.hpp
 ostream
 -
 array
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.cpp
 mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 iostream
@@ -70,101 +70,101 @@ iostream
 sstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ostream
 -
 array
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.cpp
 mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 iostream
 -
 array
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.cpp
 mat4x1.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 mat1x4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat1x4.hpp
 mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4x1.hpp
 vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.cpp
 quaternion.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
 vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
 vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.cpp
 vec2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.cpp
 vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.cpp
 vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.cpp
 backtrace.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
 execinfo.h
 -
 dlfcn.h
@@ -182,119 +182,119 @@ sstream
 string
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
 string
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 exception_cpe.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.cpp
 exception_cpe.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
 sstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/exception_cpe.hpp
 iostream
 -
 string
 -
 backtrace.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/backtrace.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.cpp
 application_qt.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 iostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
 QtGui/QApplication
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
 ../3d/mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.cpp
 navigator_tool.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
 ../3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ../3d/quaternion.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
 cmath
 -
 iostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
 trackball.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.cpp
 picking_data.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/picking_data.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 map
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.cpp
 selected_index.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/selected_index.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 list
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.cpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 trackball.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/trackball.hpp
 ../3d/quaternion.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.cpp
 intersection.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.hpp
 cmath
 -
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/intersection/intersection.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.cpp
 mesh_io_obj.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
 ../../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../../mesh/mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 sstream
 -
 fstream
@@ -304,21 +304,21 @@ assert.h
 map
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
 vector
 -
 ../../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../../3d/vec2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.cpp
 mesh_io_off.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
 ../../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../../mesh/mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 iostream
 -
 fstream
@@ -326,61 +326,61 @@ fstream
 sstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
 string
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.cpp
 mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ../3d/mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 mesh_io.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 mesh_basic.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.cpp
 mesh_basic.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ../3d/mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../3d/vec2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 triangle_index.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.cpp
 mesh_io.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
 mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 format/mesh_io_obj.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_obj.hpp
 format/mesh_io_off.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/format/mesh_io_off.hpp
 iostream
 -
 fstream
@@ -396,47 +396,47 @@ cassert
 map
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
 string
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.cpp
 mesh_parametric.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_parametric.hpp
 mesh_basic.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.cpp
 triangle_index.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/triangle_index.hpp
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.cpp
 axes_helper.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
 glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
 GL/glew.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/glew.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/glew.h
 GL/gl.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/gl.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/gl.h
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.cpp
 iostream
 -
 string
@@ -454,9 +454,9 @@ GL/glew.h
 GL/gl.h
 -
 glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 vector
 -
 string
@@ -466,81 +466,81 @@ GL/glew.h
 GL/gl.h
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.cpp
 line_opengl.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.hpp
 glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/line_opengl.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 GL/glew.h
 -
 GL/gl.h
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.cpp
 mesh_opengl.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
 ../mesh/mesh_basic.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_basic.hpp
 glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
 GL/glew.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/glew.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/glew.h
 GL/gl.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/gl.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/GL/gl.h
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.cpp
 perlin.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
 ../../external/perlin/simplexnoise1234.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/external/perlin/simplexnoise1234.hpp
 ../common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../3d/vec2.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec2.hpp
 ../3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../3d/vec4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec4.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/main.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/main.cpp
 QApplication
 -
 myWindow.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
 ../../lib/interface/application_qt.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/application_qt.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.cpp
 myWidgetGL.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
 GL/glew.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/GL/glew.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/GL/glew.h
 GL/gl.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/GL/gl.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/GL/gl.h
 ../../lib/3d/mat4.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat4.hpp
 ../../lib/3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ../../lib/opengl/glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 ../../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../../lib/interface/camera_matrices.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
 cmath
 -
 iostream
@@ -548,7 +548,7 @@ iostream
 unistd.h
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
 GL/glew.h
 -
 GL/gl.h
@@ -558,47 +558,47 @@ QtOpenGL/QGLWidget
 QMouseEvent
 -
 ../../lib/interface/navigator_tool.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/navigator_tool.hpp
 ../../lib/mesh/mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 ../../lib/opengl/mesh_opengl.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
 ../../lib/opengl/axes_helper.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/axes_helper.hpp
 ../../lib/interface/camera_matrices.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
 ../scene/scene.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.cpp
 myWindow.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
 myWidgetGL.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
 ../../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ui_mainwindow.h
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/ui_mainwindow.h
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/ui_mainwindow.h
 iostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWindow.hpp
 QMainWindow
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/scene/scene.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/scene/scene.cpp
 GL/glew.h
 -
 scene.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
 ../../lib/opengl/glutils.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/glutils.hpp
 ../../lib/perlin/perlin.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/perlin/perlin.hpp
 ../../lib/interface/camera_matrices.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
 ../interface/myWidgetGL.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/interface/myWidgetGL.hpp
 cmath
 -
 string
@@ -606,9 +606,9 @@ string
 sstream
 -
 ../../lib/mesh/mesh_io.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/local/scene/scene.hpp
 GL/gl.h
 -
 GL/glew.h
@@ -616,101 +616,101 @@ GL/glew.h
 QTime
 -
 ../../lib/3d/mat3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/mat3.hpp
 ../../lib/3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../../lib/mesh/mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 ../../lib/opengl/mesh_opengl.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/opengl/mesh_opengl.hpp
 ../../lib/interface/camera_matrices.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/interface/camera_matrices.hpp
 ../../skinning/mesh_skinned.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
 ../../skinning/skeleton_parent_id.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
 ../../skinning/skeleton_animation.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
 vector
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.cpp
 mesh_skinned.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
 ../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 ../lib/mesh/mesh_io.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh_io.hpp
 skeleton_geometry.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
 sstream
 -
 fstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/mesh_skinned.hpp
 vertex_weight_parameter.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
 ../lib/mesh/mesh.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/mesh/mesh.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.cpp
 skeleton_animation.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
 ../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 sstream
 -
 fstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_animation.hpp
 skeleton_geometry.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.cpp
 skeleton_geometry.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
 skeleton_parent_id.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
 ../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 sstream
 -
 fstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_geometry.hpp
 skeleton_joint.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
 vector
 -
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.cpp
 skeleton_joint.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_joint.hpp
 ../lib/3d/vec3.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/vec3.hpp
 ../lib/3d/quaternion.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/3d/quaternion.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.cpp
 skeleton_parent_id.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
 ../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 sstream
 -
 fstream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skeleton_parent_id.hpp
 vector
 -
 string
@@ -718,23 +718,23 @@ string
 ostream
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.cpp
 skinning_weight.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.cpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.cpp
 vertex_weight_parameter.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
 ../lib/common/error_handling.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/lib/common/error_handling.hpp
 cmath
 -
 
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/vertex_weight_parameter.hpp
 skinning_weight.hpp
-/fs03/share/users/maxime.di-folco/home/5ETI/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
+/fs03/share/users/charly.girot/home/5A/SimulationAnimation/tp_skinning/project/src/skinning/skinning_weight.hpp
 array
 -
 
