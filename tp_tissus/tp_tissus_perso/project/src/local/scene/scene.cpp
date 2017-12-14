@@ -25,6 +25,7 @@ using namespace cpe;
 
 static cpe::mesh build_ground(float const L,float const h);
 static cpe::mesh build_sphere(float radius,vec3 center);
+static cpe::mesh build_ellipse(float rad1, float rad2, vec3 center);
 
 
 void scene::load_scene()
@@ -55,6 +56,7 @@ void scene::load_scene()
     //*****************************************//
     mesh_sphere = build_sphere(radius , centre);
     mesh_sphere.fill_empty_field_by_default();
+    //mesh_sphere.transform_apply_translation(vec3(0.5f,0.5f,0.5f));
     mesh_sphere_opengl.fill_vbo(mesh_sphere);
 
     //*****************************************//
@@ -78,7 +80,17 @@ void scene::load_scene()
     mesh_cat = load_mesh_file("data/cat.obj");
     mesh_cat.transform_apply_auto_scale_and_center();
     mesh_cat.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    mesh_cat.transform_apply_translation(vec3(0.6f,0.3f,-0.6f));
     mesh_cat_opengl.fill_vbo(mesh_cat);
+
+    //***************************************//
+    // Build cat hull
+    //**************************************//
+    hull_cat = load_mesh_file("data/cat_hull.obj");
+    hull_cat.transform_apply_auto_scale_and_center();
+    hull_cat.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    hull_cat.transform_apply_translation(vec3(0.6f,0.3f,-0.6f));
+    hull_cat_opengl.fill_vbo(hull_cat);
 
 
 }
@@ -99,6 +111,8 @@ void scene::draw_scene()
     // Draw the cat
     glBindTexture(GL_TEXTURE_2D, texture_cat);
     mesh_cat_opengl.draw();
+    glBindTexture(GL_TEXTURE_2D,texture_default);
+    hull_cat_opengl.draw();
 
 
     //try numerical integration (stop computation if divergence)
@@ -111,6 +125,7 @@ void scene::draw_scene()
             mesh_cloth.integration_step();
             mesh_cloth.update_shpere_collision(mesh_sphere,centre,radius);
             mesh_cloth.update_plan_collision(mesh_ground);
+            mesh_cloth.update_cat_collision(hull_cat);
 
             // re-compute normals
             mesh_cloth.fill_normal();
@@ -226,3 +241,11 @@ static cpe::mesh build_sphere(float radius,vec3 center)
 }
 
 
+static cpe::mesh build_ellipse(float rad1, float rad2, vec3 center)
+{
+    mesh m;
+    m.load(("data/box.obj"));
+    m.transform_apply_auto_scale_and_center();
+    m.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    return m;
+}

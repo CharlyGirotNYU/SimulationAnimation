@@ -61,6 +61,8 @@ public:
     /* Check collision with a sphere given as parameter */
     void update_shpere_collision(mesh m, vec3 centre, float radius);
 
+    void update_cat_collision(mesh m);
+
     /** Set Delta T called by the ui */
     float& set_dt();
     /** Set wind power value called by the ui*/
