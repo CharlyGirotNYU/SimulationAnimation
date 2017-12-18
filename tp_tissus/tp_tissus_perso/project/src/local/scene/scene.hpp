@@ -90,9 +90,12 @@ private:
     cpe::mesh_opengl mesh_cat_opengl;
 
     /** Cat hull */
-    cpe::mesh hull_cat;
+    cpe::mesh hull_cat, hull_2, hull_3;
     /** Cat hull for OpenGL drawing/Debug */
     cpe::mesh_opengl hull_cat_opengl;
+
+    cpe::vec3 centre_cylindre;
+    float radius_cylindre;
 
     /** OpenGL ID for shader drawing meshes */
     GLuint shader_mesh;

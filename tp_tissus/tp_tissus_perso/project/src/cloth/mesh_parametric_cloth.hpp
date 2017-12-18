@@ -61,7 +61,7 @@ public:
     /* Check collision with a sphere given as parameter */
     void update_shpere_collision(mesh m, vec3 centre, float radius);
 
-    void update_cat_collision(mesh m);
+    void update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre);
 
     /** Set Delta T called by the ui */
     float& set_dt();
@@ -73,6 +73,7 @@ public:
     float& set_K_bending();
     /** Compute distance between two vec3 */
     float distance(vec3 A,vec3 B);
+    float distance_xz(vec3 A, vec3 B);
 
 private:
 

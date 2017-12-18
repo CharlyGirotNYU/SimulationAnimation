@@ -26,6 +26,8 @@ using namespace cpe;
 static cpe::mesh build_ground(float const L,float const h);
 static cpe::mesh build_sphere(float radius,vec3 center);
 static cpe::mesh build_ellipse(float rad1, float rad2, vec3 center);
+static cpe::mesh build_cylinder(float radius, float length,
+                                unsigned c_steps, unsigned l_steps);
 
 
 void scene::load_scene()
@@ -86,11 +88,28 @@ void scene::load_scene()
     //***************************************//
     // Build cat hull
     //**************************************//
-    hull_cat = load_mesh_file("data/cat_hull.obj");
-    hull_cat.transform_apply_auto_scale_and_center();
+    radius_cylindre = 0.1f;
+    centre_cylindre = vec3(0.6,0.3,-0.6f);
+    hull_cat = build_cylinder(radius_cylindre,0.5,30,20);
+    //hull_cat.transform_apply_auto_scale_and_center();
     hull_cat.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
-    hull_cat.transform_apply_translation(vec3(0.6f,0.3f,-0.6f));
+    hull_cat.transform_apply_translation(centre_cylindre);
     hull_cat_opengl.fill_vbo(hull_cat);
+
+    radius_cylindre = 0.025f;
+    centre_cylindre = vec3(0.6,0.8,-0.5f);
+    hull_2 = build_cylinder(radius_cylindre,0.5,30,20);
+    //hull_cat.transform_apply_auto_scale_and_center();
+    hull_2.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    hull_2.transform_apply_translation(centre_cylindre);
+    hull_cat_opengl.fill_vbo(hull_2);
+
+    radius_cylindre = 0.08f;
+    centre_cylindre = vec3(0.3f,-0.08f,-0.2f);
+    hull_3 = build_sphere(radius_cylindre,centre_cylindre);
+    //hull_cat.transform_apply_auto_scale_and_center();
+    hull_3.transform_apply_translation(centre_cylindre);
+    hull_cat_opengl.fill_vbo(hull_3);
 
 
 }
@@ -125,7 +144,10 @@ void scene::draw_scene()
             mesh_cloth.integration_step();
             mesh_cloth.update_shpere_collision(mesh_sphere,centre,radius);
             mesh_cloth.update_plan_collision(mesh_ground);
-            mesh_cloth.update_cat_collision(hull_cat);
+//            mesh_cloth.update_cat_collision(hull_cat,radius_cylindre,centre_cylindre);
+//            mesh_cloth.update_cat_collision(hull_2,radius_cylindre,centre_cylindre);
+            mesh_cloth.update_shpere_collision(hull_3,centre_cylindre,radius_cylindre);
+            //TODO : Mettre un cylindre par bout important du chat (va prendre beaucoup temps de calcul
 
             // re-compute normals
             mesh_cloth.fill_normal();
@@ -247,5 +269,40 @@ static cpe::mesh build_ellipse(float rad1, float rad2, vec3 center)
     m.load(("data/box.obj"));
     m.transform_apply_auto_scale_and_center();
     m.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
+    return m;
+}
+
+
+static cpe::mesh build_cylinder(float radius, float length,
+                            unsigned c_steps, unsigned l_steps)
+{
+    mesh m;
+    // Creating the vertices
+    for (unsigned i = 0; i <= l_steps; i++)
+    {
+        float z = length * i / l_steps;
+        for (unsigned j = 0; j < c_steps; j++)
+        {
+            float angle = M_PI * 2.f * j / c_steps;
+            float x = radius * cos(angle);
+            float y = radius * sin(angle);
+            m.add_vertex(vec3(x,y, z));
+        }
+    }
+
+    // And now for the connectivity!
+    for (unsigned i = 0; i < l_steps; i++)
+    {
+        for (unsigned j = 0; j < c_steps; j++)
+        {
+            int i0 = (i + 0) * c_steps + (j + 0) % c_steps;
+            int i1 = (i + 0) * c_steps + (j + 1) % c_steps;
+            int i2 = (i + 1) * c_steps + (j + 0) % c_steps;
+            int i3 = (i + 1) * c_steps + (j + 1) % c_steps;
+            m.add_triangle_index({i0,i1,i2});
+            m.add_triangle_index({i1,i3,i2});
+        }
+    }
+    m.fill_empty_field_by_default();
     return m;
 }

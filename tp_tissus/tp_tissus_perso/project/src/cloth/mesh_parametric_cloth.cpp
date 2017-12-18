@@ -342,7 +342,7 @@ void mesh_parametric_cloth::update_shpere_collision(mesh m, cpe::vec3 centre, fl
     int const N_total = Nu*Nv;
     ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
 
-    float epsilon=0.15f;
+    float epsilon=0.0015f;
 
     for(int ku=0 ; ku<Nu ; ++ku)
     {
@@ -365,7 +365,7 @@ void mesh_parametric_cloth::update_shpere_collision(mesh m, cpe::vec3 centre, fl
 }
 
 
-void mesh_parametric_cloth::update_cat_collision(mesh m)
+void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre)
 {
     int const N = m.size_vertex();
 
@@ -374,7 +374,7 @@ void mesh_parametric_cloth::update_cat_collision(mesh m)
     int const N_total = Nu*Nv;
     ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
 
-    float epsilon=0.15;//0.0015f;
+    float epsilon=0.015f;//0.0015f;
 
     for(int ku=0 ; ku<Nu ; ++ku)
     {
@@ -383,16 +383,15 @@ void mesh_parametric_cloth::update_cat_collision(mesh m)
             for(int k=0; k<N; k++)
             {
                 //std::cout << distance(vertex(ku,kv),m.vertex(k)) << std::endl;
-                if(distance(vertex(ku,kv),m.vertex(k)) < epsilon)
+                if(distance_xz(vertex(ku,kv),centre_cylindre) < radius_cylindre + epsilon)
                 {
                     float speed_n = dot(speed(ku,kv),m.normal(k));
                     float force_n = dot(force(ku,kv),m.normal(k));
                     force(ku,kv) -= force_n *m.normal(k);
                     speed(ku,kv) -= speed_n * m.normal(k);
-                    //force(ku,kv)=vec3(0,0,0);
-                    //speed(ku,kv)=vec3(0,0,0);
-                    vertex(ku,kv) += epsilon/300.0f *m.normal(k);
-                    //k=N;
+                    vertex(ku,kv) += epsilon *m.normal(k);
+                    k=N; //fait gagner du temps de calcul en
+                    //supposant qu'un vertex de tissu n'atteint qu'un seul point du cylindre
                 }
             }
         }
@@ -402,6 +401,11 @@ void mesh_parametric_cloth::update_cat_collision(mesh m)
 float mesh_parametric_cloth::distance(vec3 A,vec3 B)
 {
     return sqrt( (A.x()-B.x())*(A.x()-B.x()) + (A.y()-B.y())*(A.y()-B.y()) + (A.z()-B.z())*(A.z()-B.z()));
+}
+
+float mesh_parametric_cloth::distance_xz(vec3 A,vec3 B)
+{
+    return sqrt( (A.x()-B.x())*(A.x()-B.x()) + (A.z()-B.z())*(A.z()-B.z()));
 }
 
 
