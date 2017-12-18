@@ -182,8 +182,8 @@ void mesh_parametric_cloth::update_force()
 
 
 
-    force(0,0) = vec3(0,0,0);
-    force(0,Nv-1) = vec3(0,0,0);
+//    force(0,0) = vec3(0,0,0);
+//    force(0,Nv-1) = vec3(0,0,0);
 
 
 }
@@ -333,7 +333,8 @@ void mesh_parametric_cloth::update_plan_collision(cpe::mesh m)
     }
 }
 
-void mesh_parametric_cloth::update_shpere_collision(mesh m, cpe::vec3 centre, float radius)
+
+void mesh_parametric_cloth::update_shpere_collision(mesh m, vec3 centre, float radius)
 {
     int const N = m.size_vertex();
 
@@ -342,30 +343,31 @@ void mesh_parametric_cloth::update_shpere_collision(mesh m, cpe::vec3 centre, fl
     int const N_total = Nu*Nv;
     ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
 
-    float epsilon=0.0015f;
+    float epsilon=0.022f;
+    float mu = 1.9f;
+
+    vec3 p_vec, n;
 
     for(int ku=0 ; ku<Nu ; ++ku)
     {
         for(int kv=0 ; kv<Nv ; ++kv)
         {
-            for(int k=0; k<N; k++)
+            p_vec = vertex(ku,kv) - centre;
+            if(norm(p_vec) < (radius+epsilon))
             {
-                if(distance(vertex(ku,kv),centre) < radius+epsilon)
-                {
-                    float speed_n = dot(speed(ku,kv),m.normal(k));
-                    float force_n = dot(force(ku,kv),m.normal(k));
-                    force(ku,kv) -= force_n *m.normal(k);
-                    speed(ku,kv) -= speed_n * m.normal(k);
-                    vertex(ku,kv) += epsilon *m.normal(k);
-                }
+                n = normalized(vertex(ku,kv)-centre);
+                 vertex(ku,kv) = centre + (radius+epsilon)*n;
+                 speed(ku,kv) += (1-mu)*dot(speed(ku,kv),n)*n;
+                 //force(ku,kv) -= (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
             }
         }
     }
 
+
 }
 
 
-void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre)
+void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2)
 {
     int const N = m.size_vertex();
 
@@ -374,29 +376,41 @@ void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, 
     int const N_total = Nu*Nv;
     ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
 
-    float epsilon=0.015f;//0.0015f;
+    float epsilon=0.020f;//0.0015f;
+    float mu = 1.8f;
+
+    vec3 axis = centre2 - centre_cylindre;
+    float h = norm(axis); //== length ??
+    vec3 p_vec, n, p_centre;
+
 
     for(int ku=0 ; ku<Nu ; ++ku)
     {
         for(int kv=0 ; kv<Nv ; ++kv)
         {
-            for(int k=0; k<N; k++)
-            {
-                //std::cout << distance(vertex(ku,kv),m.vertex(k)) << std::endl;
-                if(distance_xz(vertex(ku,kv),centre_cylindre) < radius_cylindre + epsilon)
+
+                p_vec = vertex(ku,kv) - centre_cylindre;
+                float d = dot(normalized(axis),p_vec);
+
+                if(d>0-epsilon && d<h+epsilon) // if in the cylinder
                 {
-                    float speed_n = dot(speed(ku,kv),m.normal(k));
-                    float force_n = dot(force(ku,kv),m.normal(k));
-                    force(ku,kv) -= force_n *m.normal(k);
-                    speed(ku,kv) -= speed_n * m.normal(k);
-                    vertex(ku,kv) += epsilon *m.normal(k);
-                    k=N; //fait gagner du temps de calcul en
-                    //supposant qu'un vertex de tissu n'atteint qu'un seul point du cylindre
+                    if(norm(p_vec)*norm(p_vec) - d*d < (radius_cylindre+epsilon)*(radius_cylindre+epsilon)) //pyth
+                    {
+                        p_centre = centre_cylindre + d*normalized(axis);
+                        n = vertex(ku,kv)-p_centre;
+                        n = normalized(n);
+                        vertex(ku,kv) = p_centre + (radius_cylindre+epsilon)*n;
+                        speed(ku,kv) +=  (1 - mu)*dot(speed(ku,kv), n)*n;
+//                        force(ku,kv) += (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
+
+                    }
                 }
-            }
+
         }
     }
 }
+
+
 
 float mesh_parametric_cloth::distance(vec3 A,vec3 B)
 {

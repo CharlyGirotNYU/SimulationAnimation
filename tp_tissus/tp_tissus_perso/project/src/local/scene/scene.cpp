@@ -56,7 +56,7 @@ void scene::load_scene()
     //*****************************************//
     // Sphere
     //*****************************************//
-    mesh_sphere = build_sphere(radius , centre);
+    mesh_sphere = build_sphere(radius_sphere , centre_sphere);
     mesh_sphere.fill_empty_field_by_default();
     //mesh_sphere.transform_apply_translation(vec3(0.5f,0.5f,0.5f));
     mesh_sphere_opengl.fill_vbo(mesh_sphere);
@@ -88,29 +88,34 @@ void scene::load_scene()
     //***************************************//
     // Build cat hull
     //**************************************//
-    radius_cylindre = 0.1f;
-    centre_cylindre = vec3(0.6,0.3,-0.6f);
-    hull_cat = build_cylinder(radius_cylindre,0.5,30,20);
-    //hull_cat.transform_apply_auto_scale_and_center();
+    centres.push_back(vec3(0.6f,0.5f,-0.55f));
+    centres.push_back(vec3(0.6f,0.8f,-0.5f));
+    centres.push_back(vec3(0.6f,-0.16f,-0.4f));
+    radius.push_back(0.1f);
+    radius.push_back(0.025f);
+    radius.push_back(0.07f);
+    length.push_back(0.5);
+    length.push_back(0.5);
+    length.push_back(0); //sphere
+
+    hull_cat = build_cylinder(radius.at(0),length.at(0),30,20);
     hull_cat.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
-    hull_cat.transform_apply_translation(centre_cylindre);
+    hull_cat.transform_apply_translation(centres.at(0));
+    centres_bis.push_back(centres.at(0)+ vec3(0,-1,0)*length.at(0));
     hull_cat_opengl.fill_vbo(hull_cat);
 
-    radius_cylindre = 0.025f;
-    centre_cylindre = vec3(0.6,0.8,-0.5f);
-    hull_2 = build_cylinder(radius_cylindre,0.5,30,20);
-    //hull_cat.transform_apply_auto_scale_and_center();
+    hull_2 = build_cylinder(radius.at(1),length.at(1),30,20);
     hull_2.transform_apply_rotation(vec3(1,0,0),90*M_PI/180);
-    hull_2.transform_apply_translation(centre_cylindre);
-    hull_cat_opengl.fill_vbo(hull_2);
+    hull_2.transform_apply_translation(centres.at(1));
+    centres_bis.push_back(centres.at(1)+ vec3(0,-1,0)*length.at(1));
+    //ull_cat_opengl.fill_vbo(hull_cat); //debug
 
-    radius_cylindre = 0.08f;
-    centre_cylindre = vec3(0.3f,-0.08f,-0.2f);
-    hull_3 = build_sphere(radius_cylindre,centre_cylindre);
-    //hull_cat.transform_apply_auto_scale_and_center();
-    hull_3.transform_apply_translation(centre_cylindre);
-    hull_cat_opengl.fill_vbo(hull_3);
 
+    hull_3 = build_sphere(radius.at(2),centres.at(2));
+    //hull_3.transform_apply_translation(centre_cylindre);
+//    hull_cat_opengl.fill_vbo(hull_3);
+
+    std::cout << centres.at(0) << " " << centres.at(0)+vec3(1,0,0)*length.at(0) << std::endl;
 
 }
 
@@ -131,7 +136,7 @@ void scene::draw_scene()
     glBindTexture(GL_TEXTURE_2D, texture_cat);
     mesh_cat_opengl.draw();
     glBindTexture(GL_TEXTURE_2D,texture_default);
-    hull_cat_opengl.draw();
+    //hull_cat_opengl.draw();
 
 
     //try numerical integration (stop computation if divergence)
@@ -142,11 +147,11 @@ void scene::draw_scene()
             // compute-force / time integration
             mesh_cloth.update_force();
             mesh_cloth.integration_step();
-            mesh_cloth.update_shpere_collision(mesh_sphere,centre,radius);
+           // mesh_cloth.update_shpere_collision(mesh_sphere,centre_sphere,radius_sphere); //sphere original
             mesh_cloth.update_plan_collision(mesh_ground);
-//            mesh_cloth.update_cat_collision(hull_cat,radius_cylindre,centre_cylindre);
-//            mesh_cloth.update_cat_collision(hull_2,radius_cylindre,centre_cylindre);
-            mesh_cloth.update_shpere_collision(hull_3,centre_cylindre,radius_cylindre);
+            mesh_cloth.update_cat_collision(hull_cat,radius.at(0),centres.at(0),centres_bis.at(0));
+            mesh_cloth.update_cat_collision(hull_2,radius.at(1),centres.at(1),centres_bis.at(1));
+            mesh_cloth.update_shpere_collision(hull_3,centres.at(2),radius.at(2));
             //TODO : Mettre un cylindre par bout important du chat (va prendre beaucoup temps de calcul
 
             // re-compute normals

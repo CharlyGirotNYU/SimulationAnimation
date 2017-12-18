@@ -75,10 +75,10 @@ private:
     cpe::mesh_opengl mesh_cloth_opengl;
 
     /** Parameter of a sphere */
-    float radius = 0.198f ;
+    float radius_sphere = 0.198f ;
     //cpe::vec3 centre = {0.5f,0.5f,-0.5f};
     //cpe::vec3 centre = {0.3f,-0.0f,-0.3f};
-    cpe::vec3 centre = {1.0f,1.0f,1.0f};
+    cpe::vec3 centre_sphere = {1.0f,1.0f,1.0f};
     /** Mesh of a sphere */
     cpe::mesh mesh_sphere;
     /** OpenGL VBO for the sphere */
@@ -94,8 +94,11 @@ private:
     /** Cat hull for OpenGL drawing/Debug */
     cpe::mesh_opengl hull_cat_opengl;
 
-    cpe::vec3 centre_cylindre;
-    float radius_cylindre;
+    /** all the centres, radius,  for the approximate hullS of the cat represented by cylinders and spheres (length + other side center for cylinders) */
+    std::vector<cpe::vec3> centres;
+    std::vector <float> radius;
+    std::vector<float> length;
+    std::vector<cpe::vec3> centres_bis;
 
     /** OpenGL ID for shader drawing meshes */
     GLuint shader_mesh;

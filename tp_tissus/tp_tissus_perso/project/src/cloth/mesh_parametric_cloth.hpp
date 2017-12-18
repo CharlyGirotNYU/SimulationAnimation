@@ -61,7 +61,7 @@ public:
     /* Check collision with a sphere given as parameter */
     void update_shpere_collision(mesh m, vec3 centre, float radius);
 
-    void update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre);
+    void update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2);
 
     /** Set Delta T called by the ui */
     float& set_dt();
