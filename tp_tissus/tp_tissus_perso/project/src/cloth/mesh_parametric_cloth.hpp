@@ -61,19 +61,22 @@ public:
     /* Check collision with a sphere given as parameter */
     void update_shpere_collision(mesh m, vec3 centre, float radius);
 
-    void update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2);
+    void update_cylinder_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2);
 
     /** Set Delta T called by the ui */
     float& set_dt();
+
     /** Set wind power value called by the ui*/
     float& set_wind();
+
     /** Set K values called by the ui */
     float& set_K_structural();
     float& set_K_shearing();
     float& set_K_bending();
-    /** Compute distance between two vec3 */
-    float distance(vec3 A,vec3 B);
-    float distance_xz(vec3 A, vec3 B);
+
+    /** Set attache value */
+    int& set_attache();
+
 
 private:
 
@@ -85,6 +88,8 @@ private:
     float K_structural, K_shearing, K_bending;
     float Kw; //wind
     float dt;
+
+    int attache=0;
 
 };
 

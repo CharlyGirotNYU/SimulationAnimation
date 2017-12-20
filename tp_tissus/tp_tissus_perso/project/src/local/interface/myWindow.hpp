@@ -42,6 +42,8 @@ private slots:
     void action_wind(int v);
     /** Set dt value */
     void action_dt(int v);
+    /** Set number of attached edges of cloth */
+    void action_attache(int v);
 
 
 private:

@@ -38,6 +38,7 @@ myWindow::myWindow(QWidget *parent)
     connect(ui->K_bending,SIGNAL(valueChanged(int)),this,SLOT(action_K(int)));
     connect(ui->wind,SIGNAL(valueChanged(int)),this,SLOT(action_wind(int)));
     connect(ui->dt,SIGNAL(valueChanged(int)),this,SLOT(action_dt(int)));
+    connect(ui->attache,SIGNAL(valueChanged(int)),this,SLOT(action_attache(int)));
 
 }
 
@@ -77,4 +78,7 @@ void myWindow::action_dt(int v)
     glWidget->change_dt(v);
 }
 
-
+void myWindow::action_attache(int v)
+{
+    glWidget->change_attache(v);
+}

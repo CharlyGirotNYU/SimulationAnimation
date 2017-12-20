@@ -181,9 +181,14 @@ void mesh_parametric_cloth::update_force()
         }
 
 
+    for(int ku=0; ku<attache; ++ku)
+        for(int kv=0 ; kv<attache ; ++kv)
+        {
 
-//    force(0,0) = vec3(0,0,0);
-//    force(0,Nv-1) = vec3(0,0,0);
+            force(ku,kv) = vec3(0,0,0);
+            force(ku,Nv-1-kv) = vec3(0,0,0);
+            //force(i,Nv-1-kv) =vec3(0,0,0);
+        }
 
 
 }
@@ -344,7 +349,7 @@ void mesh_parametric_cloth::update_shpere_collision(mesh m, vec3 centre, float r
     ASSERT_CPE(static_cast<int>(collision_plan_data.size()) == Nu*Nv , "Error of size");
 
     float epsilon=0.022f;
-    float mu = 1.9f;
+    float mu = 2.5f;
 
     vec3 p_vec, n;
 
@@ -356,18 +361,16 @@ void mesh_parametric_cloth::update_shpere_collision(mesh m, vec3 centre, float r
             if(norm(p_vec) < (radius+epsilon))
             {
                 n = normalized(vertex(ku,kv)-centre);
-                 vertex(ku,kv) = centre + (radius+epsilon)*n;
-                 speed(ku,kv) += (1-mu)*dot(speed(ku,kv),n)*n;
-                 //force(ku,kv) -= (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
+                vertex(ku,kv) = centre + (radius+epsilon)*n;
+                speed(ku,kv) += (1-mu)*dot(speed(ku,kv),n)*n;
+                //force(ku,kv) -= (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
             }
         }
     }
-
-
 }
 
 
-void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2)
+void mesh_parametric_cloth::update_cylinder_collision(mesh m, float radius_cylindre, vec3 centre_cylindre, vec3 centre2)
 {
     int const N = m.size_vertex();
 
@@ -383,43 +386,30 @@ void mesh_parametric_cloth::update_cat_collision(mesh m, float radius_cylindre, 
     float h = norm(axis); //== length ??
     vec3 p_vec, n, p_centre;
 
-
     for(int ku=0 ; ku<Nu ; ++ku)
     {
         for(int kv=0 ; kv<Nv ; ++kv)
         {
 
-                p_vec = vertex(ku,kv) - centre_cylindre;
-                float d = dot(normalized(axis),p_vec);
+            p_vec = vertex(ku,kv) - centre_cylindre;
+            float d = dot(normalized(axis),p_vec);
 
-                if(d>0-epsilon && d<h+epsilon) // if in the cylinder
+            if(d>0-epsilon && d<h+epsilon) // if in the cylinder
+            {
+                if(norm(p_vec)*norm(p_vec) - d*d < (radius_cylindre+epsilon)*(radius_cylindre+epsilon)) //pyth
                 {
-                    if(norm(p_vec)*norm(p_vec) - d*d < (radius_cylindre+epsilon)*(radius_cylindre+epsilon)) //pyth
-                    {
-                        p_centre = centre_cylindre + d*normalized(axis);
-                        n = vertex(ku,kv)-p_centre;
-                        n = normalized(n);
-                        vertex(ku,kv) = p_centre + (radius_cylindre+epsilon)*n;
-                        speed(ku,kv) +=  (1 - mu)*dot(speed(ku,kv), n)*n;
-//                        force(ku,kv) += (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
+                    p_centre = centre_cylindre + d*normalized(axis);
+                    n = vertex(ku,kv)-p_centre;
+                    n = normalized(n);
+                    vertex(ku,kv) = p_centre + (radius_cylindre+epsilon)*n;
+                    speed(ku,kv) +=  (1 - mu)*dot(speed(ku,kv), n)*n;
+                    //                        force(ku,kv) += (1-mu)*dot(force(ku,kv),n)*n; //déja update dans le update_force en fonction des vertex
 
-                    }
                 }
+            }
 
         }
     }
-}
-
-
-
-float mesh_parametric_cloth::distance(vec3 A,vec3 B)
-{
-    return sqrt( (A.x()-B.x())*(A.x()-B.x()) + (A.y()-B.y())*(A.y()-B.y()) + (A.z()-B.z())*(A.z()-B.z()));
-}
-
-float mesh_parametric_cloth::distance_xz(vec3 A,vec3 B)
-{
-    return sqrt( (A.x()-B.x())*(A.x()-B.x()) + (A.z()-B.z())*(A.z()-B.z()));
 }
 
 
@@ -445,5 +435,9 @@ float &mesh_parametric_cloth::set_K_shearing()
 float &mesh_parametric_cloth::set_K_bending()
 {
     return K_bending;
+}
+int &mesh_parametric_cloth::set_attache()
+{
+    return attache;
 }
 }//Accolade du namespace

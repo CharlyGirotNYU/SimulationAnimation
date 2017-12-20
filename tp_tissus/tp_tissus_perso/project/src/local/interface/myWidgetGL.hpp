@@ -45,6 +45,8 @@ public:
     void change_wind(int v);
     /** Set delta t value */
     void change_dt(int v);
+    /** Change attache value */
+    void change_attache(int v);
 
 protected:
 

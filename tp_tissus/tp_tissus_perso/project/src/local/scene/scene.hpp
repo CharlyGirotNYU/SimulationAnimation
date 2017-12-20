@@ -50,6 +50,9 @@ public:
     void set_K_shearing(int v);
     void set_K_bending(int v);
 
+    /** Set attache value */
+    void set_attache(int v);
+
 private:
 
 
@@ -75,10 +78,8 @@ private:
     cpe::mesh_opengl mesh_cloth_opengl;
 
     /** Parameter of a sphere */
-    float radius_sphere = 0.198f ;
-    //cpe::vec3 centre = {0.5f,0.5f,-0.5f};
-    //cpe::vec3 centre = {0.3f,-0.0f,-0.3f};
-    cpe::vec3 centre_sphere = {1.0f,1.0f,1.0f};
+    float radius_sphere;
+    cpe::vec3 centre_sphere;
     /** Mesh of a sphere */
     cpe::mesh mesh_sphere;
     /** OpenGL VBO for the sphere */
@@ -90,9 +91,9 @@ private:
     cpe::mesh_opengl mesh_cat_opengl;
 
     /** Cat hull */
-    cpe::mesh hull_cat, hull_2, hull_3;
+    cpe::mesh hull_1, hull_2, hull_3;
     /** Cat hull for OpenGL drawing/Debug */
-    cpe::mesh_opengl hull_cat_opengl;
+    cpe::mesh_opengl hull_1_opengl;
 
     /** all the centres, radius,  for the approximate hullS of the cat represented by cylinders and spheres (length + other side center for cylinders) */
     std::vector<cpe::vec3> centres;

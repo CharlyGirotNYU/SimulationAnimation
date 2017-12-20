@@ -292,3 +292,8 @@ void myWidgetGL::change_dt(int v)
 {
     scene_3d.set_dt(v);
 }
+
+void myWidgetGL::change_attache(int v)
+{
+    scene_3d.set_attache(v);
+}
